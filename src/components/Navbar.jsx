@@ -1,4 +1,6 @@
 import  React , {useState}  from 'react'
+import {GiHamburgerMenu} from 'react-icons/gi';
+import { AiOutlineClose} from 'react-icons/ai';
 
 export default function Navbar() {
     const [toggle , setToggle] = useState(false);
@@ -33,7 +35,7 @@ export default function Navbar() {
                 <li>BAG (0)</li>
             </ul>
         <div className = 'md:hidden cursor-pointer' onClick = {handleNavMenu}>
-            <img src= {!nav  ?  "assets/hamBurgerMenu.svg": "assets/cross.svg"} alt="" />
+            {!nav  ? <GiHamburgerMenu size = {25} color = 'white'/>: <AiOutlineClose size = {25} color = 'white'/>}
         </div>
         </div>
         <div className = 'relative mb-7 px-[40px]'>
